@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/platzi/nodejsbasico/issues"
   },
-  "homepage": "https://github.com/platzi/nodejsbasico#readme"
+  "homepage": "https://github.com/platzi/nodejsbasico#readme",
+  "dependencies": {
+    "yargs": "^12.0.2"
+  }
 }
