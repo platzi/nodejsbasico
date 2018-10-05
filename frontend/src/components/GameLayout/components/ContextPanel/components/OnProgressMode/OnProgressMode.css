@@ -1,0 +1,33 @@
+.OnProgressMode-Players {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.OnProgressMode-Players .panel{
+  margin: 0;
+}
+
+.OnProgressMode-Players-Label {
+  font-size: 16px;
+  margin: 0;
+}
+
+.OnProgressMode-Players-Separator {
+  font-size: 24px;
+  font-style: italic;
+  margin: 0 15px;
+}
+
+.OnProgressMode-Players-Name {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+}
+
+.current {
+  border: 3px solid #337ab7;
+}

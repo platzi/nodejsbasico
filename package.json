@@ -4,7 +4,10 @@
   "description": "Repositorio para el curso básico de Node.js de Platzi.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd frontend && npm install",
+    "start-frontend": "cd frontend && npm run start",
+    "start-backend": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/platzi/nodejsbasico/issues"
   },
-  "homepage": "https://github.com/platzi/nodejsbasico#readme"
+  "homepage": "https://github.com/platzi/nodejsbasico#readme",
+  "dependencies": {
+    "nodemon": "^1.18.4",
+    "socket.io": "^2.1.1"
+  }
 }

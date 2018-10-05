@@ -1,0 +1,26 @@
+.Board-Square {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 85px;
+  height: 85px;
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Board-Square.isX {
+  color: red;
+}
+
+.Board-Square.isO {
+  color: blue;
+}
+
+@media screen and (min-width: 425px) {
+  .Board-Square {
+    width: 120px;
+    height: 120px;
+  }
+}
