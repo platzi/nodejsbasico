@@ -1,0 +1,19 @@
+.Board {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.Board.Board_Ongoing .Board-Square {
+  cursor: pointer;
+}
+
+.Board.Board_Ongoing.Board_OpponentTurn .Board-Square {
+  cursor: not-allowed;
+}
+
+.Board .Board-Player {
+  text-decoration: underline;
+}
