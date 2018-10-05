@@ -1,3 +1,5 @@
+const { newGame } = require("./gameState");
+
 module.exports = () => {
 	let players = {},
 		onWait = [],
@@ -13,15 +15,32 @@ module.exports = () => {
 		printListStatus();
 		while (onWait.length >= 2) {
 			console.log("Constructing room...");
-			/**
-			 * 
-			 * Reemplazar este bloque
-			 * 
-			 */
-			const p1 = players[onWait.pop()].user.name;
-			const p2 = players[onWait.pop()].user.name;
-			console.log(`We created a match for ${p1} and ${p2}`)
+			constructRoom(onWait.pop(), onWait.pop());
 		}
+	}
+
+	function constructRoom(pOneID, pTwoID) {
+		const roomID = pOneID + pTwoID;
+		players[pOneID].roomID = roomID;
+		players[pTwoID].roomID = roomID;
+		console.log(`Room created for ${pOneID} and ${pTwoID}`);
+		
+		if (!onMatch[roomID]) onMatch[roomID] = newGame({
+			players: [players[pOneID], players[pTwoID]],
+			roomID,
+		});
+		players[pOneID].socket.emit("gameState", newGame({
+			players: [players[pOneID], players[pTwoID]],
+			roomID,
+			playerId: 0,
+			opponentId: 1,
+		}));
+		players[pTwoID].socket.emit("gameState", newGame({
+			players: [players[pOneID], players[pTwoID]],
+			roomID,
+			playerId: 1,
+			opponentId: 0,
+		}));
 	}
 	
 	return {
