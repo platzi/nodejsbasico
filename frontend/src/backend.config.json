@@ -1,0 +1,5 @@
+{
+	"SERVER_ADDRESS": "localhost",
+	"SERVER_PORT": "3001",
+	"SERVER_PROTOCOL": "http://"
+}

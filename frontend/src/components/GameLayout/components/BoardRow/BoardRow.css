@@ -1,0 +1,5 @@
+.Board-Row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
