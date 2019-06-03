@@ -1,6 +1,6 @@
 module.exports = {
     sync: function(nombre) {
-        return "Hola ${nombre}! Bienvenido a Node.js";
+        return `Hola ${nombre}! Bienvenido a Node.js`;
     },
     withCallback: function(nombre, cb) {
         setTimeout(()=>{
